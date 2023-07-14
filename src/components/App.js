@@ -73,13 +73,14 @@ export default function App() {
           />
         )}
         <AddFriendBtn showForm={showForm} onSetShowForm={setShowForm}>
-          {showForm ? "Cancle" : "Add Friend"}
+          {showForm ? "Cancel" : "Add Friend"}
         </AddFriendBtn>
       </div>
       {selectedFriend && (
         <FormSplitBill
           onSplitBill={handleSplitBill}
           selectedFriend={selectedFriend}
+          key={selectedFriend.id}
         />
       )}
     </div>
